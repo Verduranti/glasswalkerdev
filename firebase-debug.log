@@ -1,0 +1,98 @@
+[debug] [2023-03-11T05:45:37.846Z] ----------------------------------------------------------------------
+[debug] [2023-03-11T05:45:37.846Z] Command:       /opt/homebrew/Cellar/node/17.2.0/bin/node /opt/homebrew/bin/firebase init hosting
+[debug] [2023-03-11T05:45:37.847Z] CLI Version:   11.24.1
+[debug] [2023-03-11T05:45:37.847Z] Platform:      darwin
+[debug] [2023-03-11T05:45:37.847Z] Node Version:  v17.2.0
+[debug] [2023-03-11T05:45:37.848Z] Time:          Fri Mar 10 2023 21:45:37 GMT-0800 (Pacific Standard Time)
+[debug] [2023-03-11T05:45:37.848Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-11T05:45:37.851Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-11T05:45:37.851Z] > authorizing via signed-in user (angelofchaos@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/chris/IdeaProjects/glasswalkerdev
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-03-11T05:45:42.109Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2023-03-11T05:45:42.763Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2023-03-11T05:45:42.763Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2023-03-11T05:45:46.650Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/glass-walker-dev:addFirebase [none]
+[debug] [2023-03-11T05:45:47.726Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/glass-walker-dev:addFirebase 200
+[debug] [2023-03-11T05:45:47.727Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/glass-walker-dev:addFirebase {"name":"operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5"}
+[debug] [2023-03-11T05:45:47.729Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 [none]
+[debug] [2023-03-11T05:45:47.986Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 200
+[debug] [2023-03-11T05:45:47.987Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 {"name":"operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5"}
+[debug] [2023-03-11T05:45:48.491Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-03-11T05:45:48.493Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 [none]
+[debug] [2023-03-11T05:45:48.731Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 200
+[debug] [2023-03-11T05:45:48.731Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 {"name":"operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5"}
+[debug] [2023-03-11T05:45:49.736Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-03-11T05:45:49.737Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 [none]
+[debug] [2023-03-11T05:45:50.008Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 200
+[debug] [2023-03-11T05:45:50.008Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 {"name":"operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5"}
+[debug] [2023-03-11T05:45:52.014Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-03-11T05:45:52.014Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 [none]
+[debug] [2023-03-11T05:45:52.290Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 200
+[debug] [2023-03-11T05:45:52.290Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 {"name":"operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5"}
+[debug] [2023-03-11T05:45:56.293Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-03-11T05:45:56.295Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 [none]
+[debug] [2023-03-11T05:45:56.551Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 200
+[debug] [2023-03-11T05:45:56.551Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5 {"name":"operations/workflows/M2ZkNDY5MjItM2FiMi00MDE2LTk2ZjgtZGFjZDAwNTFjZjI5","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"glass-walker-dev","projectNumber":"1033996757864","displayName":"Glass Walker Dev","name":"projects/glass-walker-dev","resources":{"hostingSite":"glass-walker-dev"}}}
+[info] 
+[info] 🎉🎉🎉 Your Firebase project is ready! 🎉🎉🎉
+[info] 
+[info] Project information:
+[info]    - Project ID: glass-walker-dev
+[info]    - Project Name: Glass Walker Dev
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/glass-walker-dev/overview
+[info] i  Using project glass-walker-dev (Glass Walker Dev) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-03-11T05:46:24.584Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-03-11T05:46:24.684Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-03-11T05:46:24.685Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.17.2","browserURL":"https://www.gstatic.com/firebasejs/9.17.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.17.2/firebase.tgz"},"live":{"version":"9.17","browserURL":"https://www.gstatic.com/firebasejs/live/9.17/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.17/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.17.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.17.2/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.17.2/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.17.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.17.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.17.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.17.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.17.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.17.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.17.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/chris/IdeaProjects/glasswalkerdev 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=243783051&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-03-11T05:46:50.669Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-03-11T05:46:50.670Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-03-11T05:46:50.965Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-03-11T05:46:50.965Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-03-11T05:46:50.972Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-03-11T05:46:51.280Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-03-11T05:46:51.280Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Verduranti","id":10637180,"node_id":"MDQ6VXNlcjEwNjM3MTgw","avatar_url":"https://avatars.githubusercontent.com/u/10637180?v=4","gravatar_id":"","url":"https://api.github.com/users/Verduranti","html_url":"https://github.com/Verduranti","followers_url":"https://api.github.com/users/Verduranti/followers","following_url":"https://api.github.com/users/Verduranti/following{/other_user}","gists_url":"https://api.github.com/users/Verduranti/gists{/gist_id}","starred_url":"https://api.github.com/users/Verduranti/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Verduranti/subscriptions","organizations_url":"https://api.github.com/users/Verduranti/orgs","repos_url":"https://api.github.com/users/Verduranti/repos","events_url":"https://api.github.com/users/Verduranti/events{/privacy}","received_events_url":"https://api.github.com/users/Verduranti/received_events","type":"User","site_admin":false,"name":"Chris","company":"Glass Walker Development","blog":"","location":"Seattle","email":null,"hireable":null,"bio":"Retired principal data engineer. Now consulting with startups that need insight fast.","twitter_username":"Verduranti","public_repos":14,"public_gists":0,"followers":2,"following":2,"created_at":"2015-01-21T18:46:10Z","updated_at":"2023-03-08T04:27:44Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":15132,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as Verduranti 
+[info] 
+[debug] [2023-03-11T05:47:12.773Z] >>> [apiv2][query] GET https://api.github.com/repos/verduranti/glasswalkerdev/actions/secrets/public-key type=owner
+[debug] [2023-03-11T05:47:12.933Z] <<< [apiv2][status] GET https://api.github.com/repos/verduranti/glasswalkerdev/actions/secrets/public-key 404
+[debug] [2023-03-11T05:47:12.933Z] <<< [apiv2][body] GET https://api.github.com/repos/verduranti/glasswalkerdev/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2023-03-11T05:47:16.991Z] >>> [apiv2][query] GET https://api.github.com/repos/verduranti/glasswalkerdev/actions/secrets/public-key type=owner
+[debug] [2023-03-11T05:47:17.162Z] <<< [apiv2][status] GET https://api.github.com/repos/verduranti/glasswalkerdev/actions/secrets/public-key 404
+[debug] [2023-03-11T05:47:17.163Z] <<< [apiv2][body] GET https://api.github.com/repos/verduranti/glasswalkerdev/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
