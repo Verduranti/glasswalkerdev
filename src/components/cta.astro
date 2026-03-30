@@ -1,16 +1,43 @@
 ---
-import Link from "./ui/link.astro";
+interface Props {
+  headline?: string;
+  description?: string;
+  buttonText?: string;
+  buttonHref?: string;
+}
+
+const {
+  headline = "Ready to unlock your data?",
+  description = "Let's talk about how modern data engineering and AI can accelerate your business.",
+  buttonText = "Get in touch",
+  buttonHref = "/contact",
+} = Astro.props;
 ---
 
-<div
-  class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
-  <h2 class="text-white text-4xl md:text-6xl tracking-tight">
-    Get answers. Grow faster.
-  </h2>
-  <p class="text-slate-400 mt-4 text-lg md:text-xl">
-    Reach out to discuss your data needs.
-  </p>
-  <div class="flex mt-5">
-    <Link href="/contact" style="inverted">Contact us</Link>
+<section class="py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-3xl bg-surface-dark px-8 py-16 md:px-16 md:py-24 text-center">
+      <!-- Background decoration -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-600/15 blur-[100px] rounded-full"></div>
+      <div class="absolute bottom-0 right-0 w-[300px] h-[200px] bg-accent-500/10 blur-[80px] rounded-full"></div>
+
+      <div class="relative">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          {headline}
+        </h2>
+        <p class="mt-5 text-lg text-slate-400 max-w-xl mx-auto leading-relaxed">
+          {description}
+        </p>
+        <div class="mt-10">
+          <a
+            href={buttonHref}
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-colors shadow-lg shadow-brand-600/25 text-lg"
+          >
+            {buttonText}
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>

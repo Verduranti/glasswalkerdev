@@ -1,27 +1,13 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "strictNullChecks": true,
     "baseUrl": "src",
     "paths": {
-      "@lib/*": [
-        "lib/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@components/*": [
-        "components/*"
-      ],
-      "@layouts/*": [
-        "layouts/*"
-      ],
-      "@assets/*": [
-        "assets/*"
-      ],
-      "@pages/*": [
-        "pages/*"
-      ],
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@assets/*": ["assets/*"],
+      "@pages/*": ["pages/*"],
+      "@content/*": ["content/*"]
     }
   }
 }

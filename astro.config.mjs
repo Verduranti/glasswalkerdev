@@ -1,17 +1,15 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
+import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel";
 
 export default defineConfig({
   site: "https://glasswalker.dev",
-  integrations: [
-    tailwind(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
-    mdx(),
-    sitemap(),
-  ],
+  output: "static",
+  adapter: vercel(),
+  integrations: [mdx(), sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

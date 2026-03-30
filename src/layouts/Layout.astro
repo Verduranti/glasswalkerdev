@@ -1,80 +1,55 @@
 ---
-import { SEO } from "astro-seo";
-import Footer from "@components/footer.astro";
-import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource/inter/variable.css";
+import "../styles/global.css";
+import Nav from "@components/Nav.astro";
+import Footer from "@components/Footer.astro";
 
-export interface Props {
-  title: string;
+interface Props {
+  title?: string;
+  description?: string;
 }
 
+const {
+  title,
+  description = "Glass Walker Development — Data engineering, analytics, and AI app development. BigQuery, dbt, Looker, and custom AI solutions.",
+} = Astro.props;
+
+const pageTitle = title ? `${title} | Glass Walker Development` : "Glass Walker Development";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
-
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
-
-const { title } = Astro.props;
-
-const makeTitle = title
-  ? title + " | " + "GWD"
-  : "GWD";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-white text-slate-900">
   <head>
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5ZC9X4K');</script>
-  <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
 
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
-    <SEO
-      title={makeTitle}
-      description="Glass Walker Development offers analytic services for early stage companies."
-      canonical={canonicalURL}
-      twitter={{
-        creator: "@verduranti",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `Glass Walker Development - Analytics for startups`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "Glass Walker Development Homepage Screenshot",
-        },
-      }}
-    />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Glass Walker Development" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <title>{pageTitle}</title>
   </head>
-  <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZC9X4K"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-    <Navbar />
-    <slot />
+  <body class="min-h-screen flex flex-col">
+    <Nav />
+    <main class="flex-1">
+      <slot />
+    </main>
     <Footer />
-    <style is:global>
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
-      img {
-        content-visibility: auto;
-      }
-    </style>
   </body>
 </html>
