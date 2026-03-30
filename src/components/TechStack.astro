@@ -1,0 +1,40 @@
+---
+const tools = [
+  { name: "BigQuery", category: "Data Warehouse" },
+  { name: "Dataform", category: "Transformation" },
+  { name: "dbt", category: "Transformation" },
+  { name: "Looker", category: "BI Platform" },
+  { name: "Looker Studio", category: "Dashboards" },
+  { name: "Google Cloud", category: "Infrastructure" },
+  { name: "Python", category: "Development" },
+  { name: "Cloud Functions", category: "Serverless" },
+];
+---
+
+<section class="py-24 bg-slate-50 border-y border-slate-200">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="text-center">
+      <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider">Tech Stack</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+        Built on tools you can trust
+      </h2>
+      <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+        No expensive proprietary platforms. I build on proven, scalable technologies anchored in the Google Cloud ecosystem.
+      </p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6">
+      {tools.map((tool) => (
+        <div class="card-hover flex flex-col items-center gap-3 p-6 rounded-xl bg-white border border-slate-200 text-center">
+          <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-sm">
+            {tool.name.slice(0, 2).toUpperCase()}
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900 text-sm">{tool.name}</p>
+            <p class="text-xs text-slate-500 mt-0.5">{tool.category}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

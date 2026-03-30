@@ -1,0 +1,112 @@
+---
+import Layout from "@layouts/Layout.astro";
+import CTA from "@components/CTA.astro";
+
+const projects = [
+  {
+    title: "Startup Analytics Platform",
+    category: "Data Engineering + BI",
+    description: "Built a complete analytics stack for an early-stage SaaS company — from raw event data in BigQuery to a self-service Looker Studio dashboard used daily by the founding team to track growth metrics, cohort retention, and marketing attribution.",
+    tech: ["BigQuery", "Dataform", "Looker Studio", "GA4"],
+    results: ["Dashboard adopted by entire team within 2 weeks", "Replaced 3 manual spreadsheet reports", "Reduced time-to-insight from days to minutes"],
+  },
+  {
+    title: "Marketing Data Pipeline",
+    category: "Data Engineering",
+    description: "Designed and deployed an ELT pipeline consolidating data from multiple advertising platforms, CRM, and web analytics into a single BigQuery data warehouse with modeled marketing attribution.",
+    tech: ["BigQuery", "dbt", "Cloud Functions", "Python"],
+    results: ["Unified 5 data sources into one warehouse", "Automated daily reporting for marketing team", "Enabled accurate cross-channel attribution"],
+  },
+  {
+    title: "AI Document Processor",
+    category: "AI Development",
+    description: "Built an LLM-powered application that automatically extracts, classifies, and summarizes key information from large volumes of unstructured business documents, dramatically reducing manual review time.",
+    tech: ["Python", "LLM APIs", "Cloud Functions", "BigQuery"],
+    results: ["90% reduction in manual document review", "Processed 10,000+ documents in first month", "Custom classification model with 95%+ accuracy"],
+  },
+  {
+    title: "Executive Reporting Suite",
+    category: "Analytics & BI",
+    description: "Created an investor-ready reporting package in Looker with automated weekly snapshots, KPI tracking against targets, and drill-down capabilities for board meetings and fundraising conversations.",
+    tech: ["Looker", "LookML", "BigQuery", "Google Sheets"],
+    results: ["Used in Series A fundraise deck", "Automated weekly investor updates", "Self-service drill-downs for leadership team"],
+  },
+];
+---
+
+<Layout title="Portfolio" description="Selected projects from Glass Walker Development — data engineering, analytics, and AI.">
+  <!-- Header -->
+  <section class="bg-surface-dark text-white py-20 md:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <p class="text-sm font-semibold text-brand-400 uppercase tracking-wider">Portfolio</p>
+      <h1 class="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+        Selected work
+      </h1>
+      <p class="mt-5 text-lg text-slate-400 max-w-2xl leading-relaxed">
+        A sample of projects across data engineering, analytics, and AI. Details anonymized to protect client confidentiality.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="space-y-16">
+        {projects.map((project, i) => (
+          <div class:list={[
+            "rounded-2xl border border-slate-200 overflow-hidden",
+            i % 2 === 0 ? "bg-white" : "bg-slate-50"
+          ]}>
+            <div class="p-8 md:p-12">
+              <div class="flex flex-wrap items-center gap-3 mb-6">
+                <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium">
+                  {project.category}
+                </span>
+              </div>
+
+              <h2 class="text-2xl md:text-3xl font-bold text-slate-900">
+                {project.title}
+              </h2>
+
+              <p class="mt-4 text-slate-600 leading-relaxed text-lg max-w-3xl">
+                {project.description}
+              </p>
+
+              <div class="mt-8 grid md:grid-cols-2 gap-8">
+                <!-- Tech used -->
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Technologies</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {project.tech.map((t) => (
+                      <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <!-- Results -->
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Results</h3>
+                  <ul class="space-y-2">
+                    {project.results.map((result) => (
+                      <li class="flex items-start gap-2 text-slate-700">
+                        <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    headline="Have a project in mind?"
+    description="I'd love to hear what you're working on. Let's explore how I can help."
+  />
+</Layout>

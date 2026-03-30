@@ -1,0 +1,138 @@
+---
+import Layout from "@layouts/Layout.astro";
+import CTA from "@components/CTA.astro";
+
+const services = [
+  {
+    id: "data-engineering",
+    title: "Data Engineering",
+    subtitle: "Solid foundations for everything else",
+    description: "I build reliable, well-documented data pipelines using BigQuery and modern transformation tools. Whether you're starting from scratch or untangling a mess of ad-hoc queries, I'll create a data foundation your team can build on with confidence.",
+    capabilities: [
+      "BigQuery data warehouse design and optimization",
+      "Dataform and dbt transformation layers with full testing",
+      "ELT pipeline architecture with incremental loading",
+      "Data quality monitoring and alerting",
+      "Schema design and documentation",
+      "Migration from legacy systems to BigQuery",
+    ],
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>`,
+  },
+  {
+    id: "analytics",
+    title: "Analytics & BI",
+    subtitle: "Answers your whole team can access",
+    description: "Dashboards aren't useful if nobody trusts them. I build reporting systems on Looker and Looker Studio that are accurate, intuitive, and designed for self-service — so your team stops waiting on analysts and starts making data-informed decisions.",
+    capabilities: [
+      "Looker LookML modeling and dashboard development",
+      "Looker Studio interactive dashboards",
+      "Google Analytics 4 implementation and reporting",
+      "KPI definition and metric framework design",
+      "Executive and investor reporting",
+      "Self-service analytics enablement and training",
+    ],
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>`,
+  },
+  {
+    id: "ai-development",
+    title: "AI App Development",
+    subtitle: "Intelligence built into your workflows",
+    description: "AI isn't just chatbots. I build custom applications that use large language models and machine learning to automate complex tasks, extract insights from unstructured data, and create intelligent experiences for your users and team.",
+    capabilities: [
+      "Custom LLM-powered applications and agents",
+      "RAG (Retrieval-Augmented Generation) systems",
+      "Automated document processing and extraction",
+      "Intelligent data enrichment pipelines",
+      "AI-assisted internal tools and workflows",
+      "Prototyping and proof-of-concept development",
+    ],
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>`,
+  },
+];
+
+const process = [
+  { step: "01", title: "Discovery", description: "We talk about your data, your goals, and what's getting in the way." },
+  { step: "02", title: "Design", description: "I propose an architecture and plan — clear scope, clear timeline." },
+  { step: "03", title: "Build", description: "Iterative development with regular check-ins. No black boxes." },
+  { step: "04", title: "Deliver", description: "Handoff with documentation, training, and ongoing support options." },
+];
+---
+
+<Layout title="Services" description="Data engineering, analytics, and AI development services from Glass Walker Development.">
+  <!-- Page header -->
+  <section class="bg-surface-dark text-white py-20 md:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <p class="text-sm font-semibold text-brand-400 uppercase tracking-wider">Services</p>
+      <h1 class="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+        What I can build for you
+      </h1>
+      <p class="mt-5 text-lg text-slate-400 max-w-2xl leading-relaxed">
+        I work across the full data lifecycle — from raw ingestion to polished dashboards to intelligent applications. Here's how I can help.
+      </p>
+    </div>
+  </section>
+
+  <!-- Service sections -->
+  {services.map((service, i) => (
+    <section id={service.id} class:list={["py-20 md:py-24", i % 2 === 1 ? "bg-slate-50" : ""]}>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center">
+              <Fragment set:html={service.icon} />
+            </div>
+            <h2 class="mt-6 text-3xl font-bold tracking-tight text-slate-900">
+              {service.title}
+            </h2>
+            <p class="mt-1 text-lg text-brand-600 font-medium">{service.subtitle}</p>
+            <p class="mt-5 text-slate-600 leading-relaxed text-lg">
+              {service.description}
+            </p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-6">Capabilities</h3>
+            <ul class="space-y-4">
+              {service.capabilities.map((cap) => (
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-brand-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <span class="text-slate-700">{cap}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Process -->
+  <section class="py-24 bg-surface-dark text-white">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-sm font-semibold text-brand-400 uppercase tracking-wider">How I work</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
+          A straightforward process
+        </h2>
+        <p class="mt-4 text-lg text-slate-400">
+          No mystery. No endless discovery phases. I get to work quickly and keep you informed throughout.
+        </p>
+      </div>
+
+      <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {process.map((item) => (
+          <div class="relative">
+            <span class="text-5xl font-black text-brand-600/20">{item.step}</span>
+            <h3 class="mt-2 text-lg font-bold text-white">{item.title}</h3>
+            <p class="mt-2 text-slate-400 leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    headline="Have a data challenge?"
+    description="I'd love to hear about it. Let's figure out the right approach together."
+    buttonText="Start a conversation"
+  />
+</Layout>
